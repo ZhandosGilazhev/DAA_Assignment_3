@@ -3,8 +3,8 @@ package model;
 import java.util.ArrayList;
 
 public class Graph {
-    ArrayList<String> verticies;
-    ArrayList<Edge> edges;
+    public ArrayList<String> verticies;
+    public ArrayList<Edge> edges;
 
     public Graph() {
         verticies = new ArrayList<>();
