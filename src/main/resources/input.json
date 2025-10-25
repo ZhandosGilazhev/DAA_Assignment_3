@@ -1,0 +1,28 @@
+{
+  "graphs": [
+    {
+      "name": "Small_KZ",
+      "vertices": ["Almaty", "Astana", "Shymkent", "Atyrau"],
+      "edges": [
+        {"from": "Almaty", "to": "Astana", "weight": 5},
+        {"from": "Almaty", "to": "Atyrau", "weight": 3},
+        {"from": "Atyrau", "to": "Shymkent", "weight": 2},
+        {"from": "Astana", "to": "Shymkent", "weight": 8}
+      ]
+    },
+    {
+      "name": "Medium_KZ",
+      "vertices": ["Almaty", "Astana", "Shymkent", "Atyrau", "Taraz", "Aktobe", "Pavlodar", "Petropavlovsk"],
+      "edges": [
+        {"from": "Almaty", "to": "Astana", "weight": 6},
+        {"from": "Almaty", "to": "Atyrau", "weight": 4},
+        {"from": "Atyrau", "to": "Shymkent", "weight": 3},
+        {"from": "Astana", "to": "Petropavlovsk", "weight": 2},
+        {"from": "Petropavlovsk", "to": "Pavlodar", "weight": 5},
+        {"from": "Taraz", "to": "Shymkent", "weight": 2},
+        {"from": "Taraz", "to": "Aktobe", "weight": 7},
+        {"from": "Pavlodar", "to": "Aktobe", "weight": 8}
+      ]
+    }
+  ]
+}
