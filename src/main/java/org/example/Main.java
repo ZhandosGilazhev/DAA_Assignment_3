@@ -1,24 +1,27 @@
 package org.example;
 
+import java.util.*;
+import model.Graph;
+import io.JsonReader;
+
 import algorithm.Kruskal;
 import algorithm.Prim;
-import model.Graph;
 
 public class Main {
     public static void main(String[] args) {
-        Graph g = new Graph();
+        String path = "src/main/resources/input.json";
 
-        g.addEdge("Almaty", "Astana", 5);
-        g.addEdge("Almaty", "Taraz", 3);
-        g.addEdge("Taraz", "Shymkent", 2);
-        g.addEdge("Astana", "Shymkent", 8);
-        g.addEdge("Astana", "Taraz", 4);
+        ArrayList<Graph> graphs = JsonReader.readGraphsFromJson(path);
 
-        g.printGraph();
 
-        System.out.println();
-        Prim.runAlgorithm(g);
-        System.out.println();
-        Kruskal.runAlgorithm(g);
+        for (Graph g : graphs) {
+            g.printGraph();
+            System.out.println();
+
+            Prim.runAlgorithm(g);
+            System.out.println();
+            Kruskal.runAlgorithm(g);
+            System.out.println("-----------------------------");
+        }
     }
 }
