@@ -12,9 +12,9 @@ public class Prim {
         public int operations;
         public int verticesCount;
         public int edgesCount;
-        public long executionTime;
+        public double executionTime;
 
-        public Result(ArrayList<Edge> mstEdges, int totalCost, int operations, int verticesCount, int edgesCount, long executionTime) {
+        public Result(ArrayList<Edge> mstEdges, int totalCost, int operations, int verticesCount, int edgesCount, double executionTime) {
             this.mstEdges = mstEdges;
             this.totalCost = totalCost;
             this.operations = operations;
@@ -25,7 +25,7 @@ public class Prim {
     }
 
     public static Result runAlgorithm(Graph graph){
-        long startTime  = System.currentTimeMillis();
+        long startTime  = System.nanoTime();
 
         ArrayList<String> verticies = graph.verticies;
         ArrayList<Edge> edges = graph.edges;
@@ -70,7 +70,7 @@ public class Prim {
             operations++;
         }
 
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
 
 
         return new Result(
@@ -78,8 +78,8 @@ public class Prim {
                 totalCost,
                 operations,
                 graph.verticies.size(),
-                graph.edges.size(),
-                endTime - startTime
+                mst.size(),
+                (endTime - startTime)/ 1_000_000.0
         );
     }
 

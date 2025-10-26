@@ -14,9 +14,9 @@ public class Kruskal {
         public int operations;
         public int verticesCount;
         public int edgesCount;
-        public long executionTime;
+        public double executionTime;
 
-        public Result(ArrayList<Edge> mstEdges, int totalCost, int operations, int verticesCount, int edgesCount, long executionTime) {
+        public Result(ArrayList<Edge> mstEdges, int totalCost, int operations, int verticesCount, int edgesCount, double executionTime) {
             this.mstEdges = mstEdges;
             this.totalCost = totalCost;
             this.operations = operations;
@@ -27,7 +27,7 @@ public class Kruskal {
     }
 
     public static Result runAlgorithm(Graph graph){
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
 
         ArrayList<Edge> edges = new ArrayList<>(graph.edges);
         Collections.sort(edges, Comparator.comparingInt(Edge::getWeight));
@@ -55,15 +55,15 @@ public class Kruskal {
             }
         }
 
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
 
         return new Result(
                 mst,
                 totalCost,
                 operations,
                 graph.verticies.size(),
-                graph.edges.size(),
-                endTime - startTime
+                mst.size(),
+                (endTime - startTime)/ 1_000_000.0
         );
     }
 
