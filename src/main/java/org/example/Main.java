@@ -3,8 +3,9 @@ package org.example;
 import java.util.*;
 
 import cli.Benchmark;
+import cli.JsonBenchmarkExporter;
 import model.Graph;
-import io.JsonReader;
+import io.*;
 
 
 public class Main {
@@ -13,10 +14,7 @@ public class Main {
 
         ArrayList<Graph> graphs = JsonReader.readGraphsFromJson(path);
 
-
-        for (Graph g : graphs) {
-            Benchmark.runBenchmark(g);
-        }
+        JsonBenchmarkExporter.run(graphs);
     }
 }
 

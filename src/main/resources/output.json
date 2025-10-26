@@ -1,0 +1,787 @@
+{
+  "results": [
+    {
+      "graph_id": 1,
+      "input_stats": {
+        "vertices": 4,
+        "edges": 4
+      },
+      "prim": {
+        "mst_edges": [
+          {
+            "from": "Almaty",
+            "to": "Taldykorgan",
+            "weight": 3
+          },
+          {
+            "from": "Almaty",
+            "to": "Shymkent",
+            "weight": 5
+          },
+          {
+            "from": "Shymkent",
+            "to": "Taraz",
+            "weight": 2
+          },
+          {
+            "from": "Maktaaral",
+            "to": "Shymkent",
+            "weight": 2
+          },
+          {
+            "from": "Kyzylorda",
+            "to": "Maktaaral",
+            "weight": 3
+          },
+          {
+            "from": "Almaty",
+            "to": "Astana",
+            "weight": 6
+          },
+          {
+            "from": "Astana",
+            "to": "Kostanay",
+            "weight": 2
+          },
+          {
+            "from": "Kostanay",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Ekibastuz",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kokshetau",
+            "to": "Kostanay",
+            "weight": 3
+          },
+          {
+            "from": "Astana",
+            "to": "Karaganda",
+            "weight": 4
+          },
+          {
+            "from": "Karaganda",
+            "to": "Temirtau",
+            "weight": 2
+          },
+          {
+            "from": "Pavlodar",
+            "to": "Ekibastuz",
+            "weight": 4
+          },
+          {
+            "from": "Semey",
+            "to": "Astana",
+            "weight": 4
+          },
+          {
+            "from": "Temirtau",
+            "to": "Zhezkazgan",
+            "weight": 4
+          },
+          {
+            "from": "Petropavlovsk",
+            "to": "Kostanay",
+            "weight": 5
+          },
+          {
+            "from": "Zhezkazgan",
+            "to": "Baikonur",
+            "weight": 5
+          },
+          {
+            "from": "Ridder",
+            "to": "Semey",
+            "weight": 5
+          },
+          {
+            "from": "Ust-Kamenogorsk",
+            "to": "Ridder",
+            "weight": 4
+          },
+          {
+            "from": "Baikonur",
+            "to": "Turar",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Pavlodar",
+            "weight": 8
+          },
+          {
+            "from": "Atyrau",
+            "to": "Aktobe",
+            "weight": 3
+          },
+          {
+            "from": "Atyrau",
+            "to": "Uralsk",
+            "weight": 5
+          },
+          {
+            "from": "Aktobe",
+            "to": "Zhanaozen",
+            "weight": 6
+          }
+        ],
+        "total_cost": 97,
+        "operations_count": 983,
+        "execution_time_ms": 0.2683
+      },
+      "kruskal": {
+        "mst_edges": [
+          {
+            "from": "Astana",
+            "to": "Kostanay",
+            "weight": 2
+          },
+          {
+            "from": "Shymkent",
+            "to": "Taraz",
+            "weight": 2
+          },
+          {
+            "from": "Karaganda",
+            "to": "Temirtau",
+            "weight": 2
+          },
+          {
+            "from": "Maktaaral",
+            "to": "Shymkent",
+            "weight": 2
+          },
+          {
+            "from": "Almaty",
+            "to": "Taldykorgan",
+            "weight": 3
+          },
+          {
+            "from": "Atyrau",
+            "to": "Aktobe",
+            "weight": 3
+          },
+          {
+            "from": "Kostanay",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kyzylorda",
+            "to": "Maktaaral",
+            "weight": 3
+          },
+          {
+            "from": "Ekibastuz",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kokshetau",
+            "to": "Kostanay",
+            "weight": 3
+          },
+          {
+            "from": "Astana",
+            "to": "Karaganda",
+            "weight": 4
+          },
+          {
+            "from": "Pavlodar",
+            "to": "Ekibastuz",
+            "weight": 4
+          },
+          {
+            "from": "Semey",
+            "to": "Astana",
+            "weight": 4
+          },
+          {
+            "from": "Temirtau",
+            "to": "Zhezkazgan",
+            "weight": 4
+          },
+          {
+            "from": "Ust-Kamenogorsk",
+            "to": "Ridder",
+            "weight": 4
+          },
+          {
+            "from": "Almaty",
+            "to": "Shymkent",
+            "weight": 5
+          },
+          {
+            "from": "Atyrau",
+            "to": "Uralsk",
+            "weight": 5
+          },
+          {
+            "from": "Petropavlovsk",
+            "to": "Kostanay",
+            "weight": 5
+          },
+          {
+            "from": "Zhezkazgan",
+            "to": "Baikonur",
+            "weight": 5
+          },
+          {
+            "from": "Ridder",
+            "to": "Semey",
+            "weight": 5
+          },
+          {
+            "from": "Almaty",
+            "to": "Astana",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Zhanaozen",
+            "weight": 6
+          },
+          {
+            "from": "Baikonur",
+            "to": "Turar",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Pavlodar",
+            "weight": 8
+          }
+        ],
+        "total_cost": 97,
+        "operations_count": 138,
+        "execution_time_ms": 0.1825
+      }
+    },
+    {
+      "graph_id": 2,
+      "input_stats": {
+        "vertices": 10,
+        "edges": 14
+      },
+      "prim": {
+        "mst_edges": [
+          {
+            "from": "Almaty",
+            "to": "Taldykorgan",
+            "weight": 3
+          },
+          {
+            "from": "Almaty",
+            "to": "Shymkent",
+            "weight": 5
+          },
+          {
+            "from": "Shymkent",
+            "to": "Taraz",
+            "weight": 2
+          },
+          {
+            "from": "Maktaaral",
+            "to": "Shymkent",
+            "weight": 2
+          },
+          {
+            "from": "Kyzylorda",
+            "to": "Maktaaral",
+            "weight": 3
+          },
+          {
+            "from": "Almaty",
+            "to": "Astana",
+            "weight": 6
+          },
+          {
+            "from": "Astana",
+            "to": "Kostanay",
+            "weight": 2
+          },
+          {
+            "from": "Kostanay",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Ekibastuz",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kokshetau",
+            "to": "Kostanay",
+            "weight": 3
+          },
+          {
+            "from": "Astana",
+            "to": "Karaganda",
+            "weight": 4
+          },
+          {
+            "from": "Karaganda",
+            "to": "Temirtau",
+            "weight": 2
+          },
+          {
+            "from": "Pavlodar",
+            "to": "Ekibastuz",
+            "weight": 4
+          },
+          {
+            "from": "Semey",
+            "to": "Astana",
+            "weight": 4
+          },
+          {
+            "from": "Temirtau",
+            "to": "Zhezkazgan",
+            "weight": 4
+          },
+          {
+            "from": "Petropavlovsk",
+            "to": "Kostanay",
+            "weight": 5
+          },
+          {
+            "from": "Zhezkazgan",
+            "to": "Baikonur",
+            "weight": 5
+          },
+          {
+            "from": "Ridder",
+            "to": "Semey",
+            "weight": 5
+          },
+          {
+            "from": "Ust-Kamenogorsk",
+            "to": "Ridder",
+            "weight": 4
+          },
+          {
+            "from": "Baikonur",
+            "to": "Turar",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Pavlodar",
+            "weight": 8
+          },
+          {
+            "from": "Atyrau",
+            "to": "Aktobe",
+            "weight": 3
+          },
+          {
+            "from": "Atyrau",
+            "to": "Uralsk",
+            "weight": 5
+          },
+          {
+            "from": "Aktobe",
+            "to": "Zhanaozen",
+            "weight": 6
+          }
+        ],
+        "total_cost": 97,
+        "operations_count": 983,
+        "execution_time_ms": 0.2683
+      },
+      "kruskal": {
+        "mst_edges": [
+          {
+            "from": "Astana",
+            "to": "Kostanay",
+            "weight": 2
+          },
+          {
+            "from": "Shymkent",
+            "to": "Taraz",
+            "weight": 2
+          },
+          {
+            "from": "Karaganda",
+            "to": "Temirtau",
+            "weight": 2
+          },
+          {
+            "from": "Maktaaral",
+            "to": "Shymkent",
+            "weight": 2
+          },
+          {
+            "from": "Almaty",
+            "to": "Taldykorgan",
+            "weight": 3
+          },
+          {
+            "from": "Atyrau",
+            "to": "Aktobe",
+            "weight": 3
+          },
+          {
+            "from": "Kostanay",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kyzylorda",
+            "to": "Maktaaral",
+            "weight": 3
+          },
+          {
+            "from": "Ekibastuz",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kokshetau",
+            "to": "Kostanay",
+            "weight": 3
+          },
+          {
+            "from": "Astana",
+            "to": "Karaganda",
+            "weight": 4
+          },
+          {
+            "from": "Pavlodar",
+            "to": "Ekibastuz",
+            "weight": 4
+          },
+          {
+            "from": "Semey",
+            "to": "Astana",
+            "weight": 4
+          },
+          {
+            "from": "Temirtau",
+            "to": "Zhezkazgan",
+            "weight": 4
+          },
+          {
+            "from": "Ust-Kamenogorsk",
+            "to": "Ridder",
+            "weight": 4
+          },
+          {
+            "from": "Almaty",
+            "to": "Shymkent",
+            "weight": 5
+          },
+          {
+            "from": "Atyrau",
+            "to": "Uralsk",
+            "weight": 5
+          },
+          {
+            "from": "Petropavlovsk",
+            "to": "Kostanay",
+            "weight": 5
+          },
+          {
+            "from": "Zhezkazgan",
+            "to": "Baikonur",
+            "weight": 5
+          },
+          {
+            "from": "Ridder",
+            "to": "Semey",
+            "weight": 5
+          },
+          {
+            "from": "Almaty",
+            "to": "Astana",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Zhanaozen",
+            "weight": 6
+          },
+          {
+            "from": "Baikonur",
+            "to": "Turar",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Pavlodar",
+            "weight": 8
+          }
+        ],
+        "total_cost": 97,
+        "operations_count": 138,
+        "execution_time_ms": 0.1825
+      }
+    },
+    {
+      "graph_id": 3,
+      "input_stats": {
+        "vertices": 25,
+        "edges": 38
+      },
+      "prim": {
+        "mst_edges": [
+          {
+            "from": "Almaty",
+            "to": "Taldykorgan",
+            "weight": 3
+          },
+          {
+            "from": "Almaty",
+            "to": "Shymkent",
+            "weight": 5
+          },
+          {
+            "from": "Shymkent",
+            "to": "Taraz",
+            "weight": 2
+          },
+          {
+            "from": "Maktaaral",
+            "to": "Shymkent",
+            "weight": 2
+          },
+          {
+            "from": "Kyzylorda",
+            "to": "Maktaaral",
+            "weight": 3
+          },
+          {
+            "from": "Almaty",
+            "to": "Astana",
+            "weight": 6
+          },
+          {
+            "from": "Astana",
+            "to": "Kostanay",
+            "weight": 2
+          },
+          {
+            "from": "Kostanay",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Ekibastuz",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kokshetau",
+            "to": "Kostanay",
+            "weight": 3
+          },
+          {
+            "from": "Astana",
+            "to": "Karaganda",
+            "weight": 4
+          },
+          {
+            "from": "Karaganda",
+            "to": "Temirtau",
+            "weight": 2
+          },
+          {
+            "from": "Pavlodar",
+            "to": "Ekibastuz",
+            "weight": 4
+          },
+          {
+            "from": "Semey",
+            "to": "Astana",
+            "weight": 4
+          },
+          {
+            "from": "Temirtau",
+            "to": "Zhezkazgan",
+            "weight": 4
+          },
+          {
+            "from": "Petropavlovsk",
+            "to": "Kostanay",
+            "weight": 5
+          },
+          {
+            "from": "Zhezkazgan",
+            "to": "Baikonur",
+            "weight": 5
+          },
+          {
+            "from": "Ridder",
+            "to": "Semey",
+            "weight": 5
+          },
+          {
+            "from": "Ust-Kamenogorsk",
+            "to": "Ridder",
+            "weight": 4
+          },
+          {
+            "from": "Baikonur",
+            "to": "Turar",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Pavlodar",
+            "weight": 8
+          },
+          {
+            "from": "Atyrau",
+            "to": "Aktobe",
+            "weight": 3
+          },
+          {
+            "from": "Atyrau",
+            "to": "Uralsk",
+            "weight": 5
+          },
+          {
+            "from": "Aktobe",
+            "to": "Zhanaozen",
+            "weight": 6
+          }
+        ],
+        "total_cost": 97,
+        "operations_count": 983,
+        "execution_time_ms": 0.2683
+      },
+      "kruskal": {
+        "mst_edges": [
+          {
+            "from": "Astana",
+            "to": "Kostanay",
+            "weight": 2
+          },
+          {
+            "from": "Shymkent",
+            "to": "Taraz",
+            "weight": 2
+          },
+          {
+            "from": "Karaganda",
+            "to": "Temirtau",
+            "weight": 2
+          },
+          {
+            "from": "Maktaaral",
+            "to": "Shymkent",
+            "weight": 2
+          },
+          {
+            "from": "Almaty",
+            "to": "Taldykorgan",
+            "weight": 3
+          },
+          {
+            "from": "Atyrau",
+            "to": "Aktobe",
+            "weight": 3
+          },
+          {
+            "from": "Kostanay",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kyzylorda",
+            "to": "Maktaaral",
+            "weight": 3
+          },
+          {
+            "from": "Ekibastuz",
+            "to": "Stepnogorsk",
+            "weight": 3
+          },
+          {
+            "from": "Kokshetau",
+            "to": "Kostanay",
+            "weight": 3
+          },
+          {
+            "from": "Astana",
+            "to": "Karaganda",
+            "weight": 4
+          },
+          {
+            "from": "Pavlodar",
+            "to": "Ekibastuz",
+            "weight": 4
+          },
+          {
+            "from": "Semey",
+            "to": "Astana",
+            "weight": 4
+          },
+          {
+            "from": "Temirtau",
+            "to": "Zhezkazgan",
+            "weight": 4
+          },
+          {
+            "from": "Ust-Kamenogorsk",
+            "to": "Ridder",
+            "weight": 4
+          },
+          {
+            "from": "Almaty",
+            "to": "Shymkent",
+            "weight": 5
+          },
+          {
+            "from": "Atyrau",
+            "to": "Uralsk",
+            "weight": 5
+          },
+          {
+            "from": "Petropavlovsk",
+            "to": "Kostanay",
+            "weight": 5
+          },
+          {
+            "from": "Zhezkazgan",
+            "to": "Baikonur",
+            "weight": 5
+          },
+          {
+            "from": "Ridder",
+            "to": "Semey",
+            "weight": 5
+          },
+          {
+            "from": "Almaty",
+            "to": "Astana",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Zhanaozen",
+            "weight": 6
+          },
+          {
+            "from": "Baikonur",
+            "to": "Turar",
+            "weight": 6
+          },
+          {
+            "from": "Aktobe",
+            "to": "Pavlodar",
+            "weight": 8
+          }
+        ],
+        "total_cost": 97,
+        "operations_count": 138,
+        "execution_time_ms": 0.1825
+      }
+    }
+  ]
+}
