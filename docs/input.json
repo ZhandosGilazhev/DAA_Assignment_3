@@ -1,0 +1,84 @@
+{
+  "graphs": [
+    {
+      "name": "Small_KZ",
+      "vertices": ["Almaty", "Astana", "Shymkent", "Atyrau"],
+      "edges": [
+        {"from": "Almaty", "to": "Astana", "weight": 5},
+        {"from": "Almaty", "to": "Atyrau", "weight": 3},
+        {"from": "Atyrau", "to": "Shymkent", "weight": 2},
+        {"from": "Astana", "to": "Shymkent", "weight": 8}
+      ]
+    },
+    {
+      "name": "Medium_KZ",
+      "vertices": ["Almaty", "Astana", "Shymkent", "Atyrau", "Taraz", "Aktobe", "Pavlodar", "Petropavlovsk", "Semey", "Kostanay"],
+      "edges": [
+        {"from": "Almaty", "to": "Astana", "weight": 6},
+        {"from": "Almaty", "to": "Atyrau", "weight": 4},
+        {"from": "Atyrau", "to": "Shymkent", "weight": 3},
+        {"from": "Astana", "to": "Petropavlovsk", "weight": 2},
+        {"from": "Petropavlovsk", "to": "Pavlodar", "weight": 5},
+        {"from": "Taraz", "to": "Shymkent", "weight": 2},
+        {"from": "Taraz", "to": "Aktobe", "weight": 7},
+        {"from": "Pavlodar", "to": "Aktobe", "weight": 8},
+        {"from": "Atyrau", "to": "Semey", "weight": 15},
+        {"from": "Kostanay", "to": "Shymkent", "weight": 9},
+        {"from": "Semey", "to": "Almaty", "weight": 5},
+        {"from": "Astana", "to": "Atyrau", "weight": 7},
+        {"from": "Kostanay", "to": "Astana", "weight": 2},
+        {"from": "Astana", "to": "Semey", "weight": 4}
+      ]
+    },
+    {
+      "name": "Large_KZ",
+      "vertices": [
+        "Almaty", "Astana", "Shymkent", "Atyrau", "Taraz", "Aktobe", "Pavlodar", "Petropavlovsk",
+        "Semey", "Kostanay", "Ust-Kamenogorsk", "Karaganda", "Temirtau", "Zhezkazgan", "Kyzylorda",
+        "Ekibastuz", "Ridder", "Semei", "Stepnogorsk", "Baikonur", "Taldykorgan", "Zhanaozen",
+        "Maktaaral", "Kokshetau", "Turar"
+      ],
+      "edges": [
+        {"from": "Almaty", "to": "Astana", "weight": 6},
+        {"from": "Almaty", "to": "Shymkent", "weight": 5},
+        {"from": "Almaty", "to": "Taldykorgan", "weight": 3},
+        {"from": "Astana", "to": "Karaganda", "weight": 4},
+        {"from": "Astana", "to": "Kostanay", "weight": 2},
+        {"from": "Shymkent", "to": "Taraz", "weight": 2},
+        {"from": "Shymkent", "to": "Kyzylorda", "weight": 7},
+        {"from": "Atyrau", "to": "Aktobe", "weight": 3},
+        {"from": "Atyrau", "to": "Uralsk", "weight": 5},
+        {"from": "Aktobe", "to": "Pavlodar", "weight": 8},
+        {"from": "Aktobe", "to": "Zhanaozen", "weight": 6},
+        {"from": "Pavlodar", "to": "Ekibastuz", "weight": 4},
+        {"from": "Petropavlovsk", "to": "Kostanay", "weight": 5},
+        {"from": "Petropavlovsk", "to": "Stepnogorsk", "weight": 7},
+        {"from": "Semey", "to": "Ust-Kamenogorsk", "weight": 6},
+        {"from": "Semey", "to": "Astana", "weight": 4},
+        {"from": "Kostanay", "to": "Stepnogorsk", "weight": 3},
+        {"from": "Karaganda", "to": "Temirtau", "weight": 2},
+        {"from": "Karaganda", "to": "Zhezkazgan", "weight": 6},
+        {"from": "Temirtau", "to": "Zhezkazgan", "weight": 4},
+        {"from": "Zhezkazgan", "to": "Baikonur", "weight": 5},
+        {"from": "Kyzylorda", "to": "Maktaaral", "weight": 3},
+        {"from": "Maktaaral", "to": "Shymkent", "weight": 2},
+        {"from": "Taldykorgan", "to": "Almaty", "weight": 3},
+        {"from": "Taldykorgan", "to": "Ust-Kamenogorsk", "weight": 9},
+        {"from": "Ust-Kamenogorsk", "to": "Ridder", "weight": 4},
+        {"from": "Ridder", "to": "Semey", "weight": 5},
+        {"from": "Baikonur", "to": "Kyzylorda", "weight": 6},
+        {"from": "Ekibastuz", "to": "Stepnogorsk", "weight": 3},
+        {"from": "Stepnogorsk", "to": "Astana", "weight": 4},
+        {"from": "Zhanaozen", "to": "Atyrau", "weight": 7},
+        {"from": "Kokshetau", "to": "Kostanay", "weight": 3},
+        {"from": "Turar", "to": "Karaganda", "weight": 8},
+        {"from": "Maktaaral", "to": "Zhanaozen", "weight": 9},
+        {"from": "Baikonur", "to": "Turar", "weight": 6},
+        {"from": "Ridder", "to": "Temirtau", "weight": 7},
+        {"from": "Ekibastuz", "to": "Astana", "weight": 5},
+        {"from": "Kokshetau", "to": "Stepnogorsk", "weight": 4}
+      ]
+    }
+
+  ]
+}
