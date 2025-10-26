@@ -14,6 +14,10 @@ public class Main {
 
         ArrayList<Graph> graphs = JsonReader.readGraphsFromJson(path);
 
+        for(Graph g : graphs){
+            Benchmark.runBenchmark(g);
+        }
+
         JsonBenchmarkExporter.run(graphs);
     }
 }
