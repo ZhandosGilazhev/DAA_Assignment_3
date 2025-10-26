@@ -8,9 +8,8 @@ import java.util.*;
 
 public class Kruskal {
 
-    private static PerformanceTracker tracker = new PerformanceTracker();
 
-    public static ArrayList<Edge> findMST(Graph graph){
+    private static void findMST(Graph graph, PerformanceTracker tracker) {
         tracker.reset();
         tracker.startTimer();
 
@@ -48,7 +47,6 @@ public class Kruskal {
         tracker.setEdgesCount(mst.size());
         tracker.setMstEdges(mst);
 
-        return mst;
     }
 
     private static String find(Map<String, String> parent, String node) {
@@ -57,7 +55,8 @@ public class Kruskal {
     }
 
     public static PerformanceTracker getTracker(Graph graph) {
-        findMST(graph);
+        PerformanceTracker tracker = new PerformanceTracker();
+        findMST(graph, tracker);
         return tracker;
     }
 

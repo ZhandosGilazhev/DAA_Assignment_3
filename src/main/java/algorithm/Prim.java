@@ -8,31 +8,26 @@ import java.util.*;
 
 public class Prim {
 
-    private static PerformanceTracker tracker = new PerformanceTracker();
-
-    public static ArrayList<Edge> findMST(Graph graph) {
+    private static void findMST(Graph graph, PerformanceTracker tracker) {
         tracker.reset();
         tracker.startTimer();
 
-        ArrayList<String> verticies = graph.verticies;
+        ArrayList<String> vertices = graph.verticies;
         ArrayList<Edge> edges = graph.edges;
 
-        tracker.setVerticesCount(verticies.size());
+        tracker.setVerticesCount(vertices.size());
 
         Set<String> connected = new HashSet<>();
-        connected.add(verticies.get(0));
+        connected.add(vertices.get(0));
 
-        while (connected.size() < verticies.size()) {
+        while (connected.size() < vertices.size()) {
             Edge cheapest = null;
 
             for (Edge e : edges) {
                 tracker.incOperations();
 
-                String a = e.getFrom();
-                String b = e.getTo();
-
-                boolean aIn = connected.contains(a);
-                boolean bIn = connected.contains(b);
+                boolean aIn = connected.contains(e.getFrom());
+                boolean bIn = connected.contains(e.getTo());
 
                 if ((aIn && !bIn) || (!aIn && bIn)) {
                     if (cheapest == null || e.getWeight() < cheapest.getWeight()) {
@@ -59,13 +54,13 @@ public class Prim {
 
         tracker.stopTimer();
         tracker.setExecutionTime();
-
-        return tracker.getMstEdges();
     }
+
 
     public static PerformanceTracker getTracker(Graph graph) {
-        findMST(graph);
+        PerformanceTracker tracker = new PerformanceTracker();
+        findMST(graph, tracker);
         return tracker;
     }
-
 }
+
