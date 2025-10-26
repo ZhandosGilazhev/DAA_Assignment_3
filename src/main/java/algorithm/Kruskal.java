@@ -7,7 +7,28 @@ import java.util.*;
 
 
 public class Kruskal {
-    public static void runAlgorithm(Graph graph){
+
+    public static class Result{
+        public ArrayList<Edge> mstEdges;
+        public int totalCost;
+        public int operations;
+        public int verticesCount;
+        public int edgesCount;
+        public long executionTime;
+
+        public Result(ArrayList<Edge> mstEdges, int totalCost, int operations, int verticesCount, int edgesCount, long executionTime) {
+            this.mstEdges = mstEdges;
+            this.totalCost = totalCost;
+            this.operations = operations;
+            this.verticesCount = verticesCount;
+            this.edgesCount = edgesCount;
+            this.executionTime = executionTime;
+        }
+    }
+
+    public static Result runAlgorithm(Graph graph){
+        long startTime = System.currentTimeMillis();
+
         ArrayList<Edge> edges = new ArrayList<>(graph.edges);
         Collections.sort(edges, Comparator.comparingInt(Edge::getWeight));
 
@@ -18,24 +39,32 @@ public class Kruskal {
 
         ArrayList<Edge> mst = new ArrayList<>();
         int totalCost = 0;
+        int operations = 0;
 
         for(Edge e : edges){
+            operations++;
             String formRoot = find(parent, e.getFrom());
             String toRoot = find(parent, e.getTo());
+            operations += 2;
 
             if(!formRoot.equals(toRoot)){
                 mst.add(e);
                 totalCost += e.getWeight();
                 parent.put(toRoot, formRoot);
+                operations++;
             }
         }
 
-        System.out.println("Kruskal Algorithm results: ");
-        for(Edge e : mst){
-            System.out.println("  " + e);
-        }
-        System.out.println("Total cost: " + totalCost);
+        long endTime = System.currentTimeMillis();
 
+        return new Result(
+                mst,
+                totalCost,
+                operations,
+                graph.verticies.size(),
+                graph.edges.size(),
+                endTime - startTime
+        );
     }
 
     private static String find(Map<String, String> parent, String node) {

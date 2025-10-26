@@ -19,7 +19,7 @@ public class JsonReader {
 
             for (JsonElement g : graphs) {
                 JsonObject graphObj = g.getAsJsonObject();
-                Graph graph = new Graph();
+                Graph graph = new Graph(graphObj.get("name").getAsString());
 
                 JsonArray edges = graphObj.getAsJsonArray("edges");
 

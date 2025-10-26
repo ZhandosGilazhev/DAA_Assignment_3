@@ -3,10 +3,12 @@ package model;
 import java.util.ArrayList;
 
 public class Graph {
+    private String name;
     public ArrayList<String> verticies;
     public ArrayList<Edge> edges;
 
-    public Graph() {
+    public Graph(String name) {
+        this.name = name;
         verticies = new ArrayList<>();
         edges = new ArrayList<>();
     }
@@ -24,6 +26,7 @@ public class Graph {
     }
 
     public void printGraph(){
+        System.out.println("Size: " + name);
         System.out.println("Cities: " + verticies);
         System.out.println("Roads: ");
         for(Edge e: edges){
@@ -31,3 +34,5 @@ public class Graph {
         }
     }
 }
+
+
