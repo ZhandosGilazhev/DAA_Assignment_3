@@ -1,33 +1,18 @@
 package algorithm;
 
+import metrics.PerformanceTracker;
 import model.Edge;
 import model.Graph;
-
 import java.util.*;
 
 
 public class Kruskal {
 
-    public static class Result{
-        public ArrayList<Edge> mstEdges;
-        public int totalCost;
-        public int operations;
-        public int verticesCount;
-        public int edgesCount;
-        public double executionTime;
+    private static PerformanceTracker tracker = new PerformanceTracker();
 
-        public Result(ArrayList<Edge> mstEdges, int totalCost, int operations, int verticesCount, int edgesCount, double executionTime) {
-            this.mstEdges = mstEdges;
-            this.totalCost = totalCost;
-            this.operations = operations;
-            this.verticesCount = verticesCount;
-            this.edgesCount = edgesCount;
-            this.executionTime = executionTime;
-        }
-    }
-
-    public static Result runAlgorithm(Graph graph){
-        long startTime = System.nanoTime();
+    public static ArrayList<Edge> findMST(Graph graph){
+        tracker.reset();
+        tracker.startTimer();
 
         ArrayList<Edge> edges = new ArrayList<>(graph.edges);
         Collections.sort(edges, Comparator.comparingInt(Edge::getWeight));
@@ -38,38 +23,42 @@ public class Kruskal {
         }
 
         ArrayList<Edge> mst = new ArrayList<>();
-        int totalCost = 0;
-        int operations = 0;
+
 
         for(Edge e : edges){
-            operations++;
+            tracker.incOperations();
             String formRoot = find(parent, e.getFrom());
             String toRoot = find(parent, e.getTo());
-            operations += 2;
+            tracker.incOperations();
+            tracker.incOperations();
+
 
             if(!formRoot.equals(toRoot)){
                 mst.add(e);
-                totalCost += e.getWeight();
+                tracker.incTotalCost(e.getWeight());
                 parent.put(toRoot, formRoot);
-                operations++;
+                tracker.incOperations();
             }
         }
 
-        long endTime = System.nanoTime();
+        tracker.stopTimer();
+        tracker.setExecutionTime();
 
-        return new Result(
-                mst,
-                totalCost,
-                operations,
-                graph.verticies.size(),
-                mst.size(),
-                (endTime - startTime)/ 1_000_000.0
-        );
+        tracker.setVerticesCount(graph.verticies.size());
+        tracker.setEdgesCount(mst.size());
+        tracker.setMstEdges(mst);
+
+        return mst;
     }
 
     private static String find(Map<String, String> parent, String node) {
         if(parent.get(node).equals(node)) return node;
         return find(parent, parent.get(node));
+    }
+
+    public static PerformanceTracker getTracker(Graph graph) {
+        findMST(graph);
+        return tracker;
     }
 
 }

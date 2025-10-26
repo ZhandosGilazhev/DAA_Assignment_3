@@ -4,10 +4,12 @@ import algorithm.Kruskal;
 import algorithm.Prim;
 import model.Graph;
 import model.Edge;
+import metrics.PerformanceTracker;
 import util.WarmupRunner;
 
 public class Benchmark {
     public static void runBenchmark(Graph graph){
+
 
         System.out.println("=================================");
         System.out.println();
@@ -16,27 +18,25 @@ public class Benchmark {
 
         WarmupRunner.runWarmup(graph, 100);
 
-        Kruskal.Result kruskalResult = Kruskal.runAlgorithm(graph);
-        printResult("Kruskal", kruskalResult);
+        PerformanceTracker kruskalTracker = Kruskal.getTracker(graph);
+        printTracker("Kruskal", kruskalTracker);
         System.out.println();
 
         System.out.println("---------------------------------");
 
-        Prim.Result primResult = Prim.runAlgorithm(graph);
-        printResult("Prim", primResult);
+        PerformanceTracker primTracker = Prim.getTracker(graph);
+        printTracker("Prim", primTracker);
         System.out.println();
 
     }
 
-    private static void printResult(String name, Object res) {
+    private static void printTracker(String name, Object obj) {
         System.out.println();
         System.out.println(name + " algorithm: ");
         System.out.println();
 
-        if (res instanceof Kruskal.Result r) {
-            printDetails(r.mstEdges,r.verticesCount, r.edgesCount, r.totalCost, r.operations, r.executionTime);
-        } else if (res instanceof Prim.Result r) {
-            printDetails(r.mstEdges,r.verticesCount, r.edgesCount, r.totalCost, r.operations, r.executionTime);
+        if (obj instanceof PerformanceTracker t) {
+            printDetails(t.getMstEdges(),t.getVerticesCount(), t.getEdgesCount(), t.getTotalCost(), t.getOperations(), t.getExecutionTime());
         }
     }
 
